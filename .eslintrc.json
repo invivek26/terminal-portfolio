@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:prettier/recommended",
+        "plugin:tailwindcss/recommended"
+    ],
+    "overrides": [
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.app.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx","tsx"] }],
+        "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }],
+        "react/forbid-prop-types": 0,
+        "react/require-default-props": 0,
+        "react/jsx-props-no-spreading": 0,
+        "no-nested-ternary": 0,
+        "react/jsx-boolean-value": 0,
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "import/prefer-default-export": 0,
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
+    },
+    "ignorePatterns": ["tailwind.config.js","tsconfig.json","postcss.config.js","vite.config.ts"]
+}

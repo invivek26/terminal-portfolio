@@ -1,0 +1,41 @@
+{
+    "about": [
+        "Hi, I'm Vivek.",
+        "I am student at Arizona State University pursuing Bachelor of Science in Computer Science.",
+        "I am an Innovative Full Stack designer and developer specializing in React Native, React, NodeJS, and Firebase.",
+        "I am passionate about building scalable and efficient web applications and mobile applications."
+    ],
+    "socials": {
+        "github": "https://github.com/invivek26",
+        "linkedin": "https://www.linkedin.com/in/vivek-i-n/"
+    },
+    "education": [
+        {
+            "institution": "Arizona State University",
+            "degree": "Bachelor of Science in Computer Science",
+            "period": "2021 - 2024",
+            "grade": "4.0 GPA",
+            "keyPoints": "Various programming languages and technologies",
+            "key": 1
+        },
+        {
+            "institution": "RV PU College",
+            "degree": "High School Diploma (Computer Science, Mathematics, Science)",
+            "period": "2019 - 2021",
+            "grade": "99.83%",
+            "keyPoints": "Focus on Computer Science, Mathematics, and Science",
+            "key": 2
+        },
+        {
+            "institution": "Deccan International School",
+            "degree": "High School Diploma (Computer Science, Mathematics, Science)",
+            "period": "2017 - 2019",
+            "grade": "96.33%",
+            "keyPoints": "Studies in Computer Science, Mathematics, and Science",
+            "key": 3
+        }
+    ],
+    "easterEgg": {
+        "message": "Oh no you have found this message. Do not tell Vivek!!!"
+    }
+}
