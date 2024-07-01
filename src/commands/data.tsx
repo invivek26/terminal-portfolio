@@ -1,6 +1,6 @@
 const descriptions = [
   { command: "about", description: "about Vivek" },
-  { command: "base64", description: "encode and decode base64" },
+  { command: "base64", description: "encode and decode files using base64" },
   { command: "cat", description: "display file content" },
   { command: "clear", description: "clear the terminal" },
   { command: "echo", description: "print arguments to the screen" },

@@ -37,5 +37,6 @@
     ],
     "easterEgg": {
         "message": "Oh no you have found this message. Do not tell Vivek!!!"
-    }
+    },
+    "version": "1.0.1"
 }

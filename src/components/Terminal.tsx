@@ -4,6 +4,7 @@ import TerminalInput from "./TerminalInput";
 import TerminalOutput from "./TerminalOutput";
 import { HistoryContext } from "./Context";
 import descriptions from "../commands/data";
+import { Banner } from "./Banner";
 
 interface Command {
   type: string;
@@ -11,7 +12,9 @@ interface Command {
 }
 
 function Terminal() {
-  const [history, setHistory] = useState<Command[]>([]);
+  const [history, setHistory] = useState<Command[]>([
+    { type: "banner", text: "banner" },
+  ]);
   const endOfTerminal = useRef<HTMLDivElement>(null);
 
   const [historyMarker, setHistoryMarker] = useState<number>(-1);
@@ -140,6 +143,7 @@ function Terminal() {
         className="h-screen overflow-auto bg-primary-100 p-2 font-mono text-green-400"
         ref={terminalContainerRef}
       >
+        {history[0]?.type === "banner" && <Banner />}
         <div ref={ioAnimationRef}>
           {history.map((command, index) => (
             <TerminalOutput

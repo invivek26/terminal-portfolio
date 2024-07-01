@@ -13,14 +13,14 @@ function TerminalOutput({ type, text, index }: TerminalOutputProps) {
     <div className="py-0.5 pl-2">
       {type === "command" ? (
         <CommandHandler command={text} index={index} />
-      ) : (
+      ) : type === "input" ? (
         <div className="flex items-center">
           <TerminalHeader />
           <span className="ml-2">
             <Text>{text}</Text>
           </span>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
