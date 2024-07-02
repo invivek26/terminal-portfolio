@@ -116,15 +116,17 @@ export function Banner() {
   return (
     <>
       <div className="pl-2">
-        <div className="flex items-center">
-          <pre>{asciiText}</pre>
-          <pre className="ml-5 text-[1.5px]">{tuxAscii}</pre>
+        <div className="flex animate-pulse items-center">
+          <pre className="text-[8px] md:text-base">{asciiText}</pre>
+          <pre className="ml-5 text-[1px] md:text-[1.5px]">{tuxAscii}</pre>
         </div>
         <br />
-        <Text>Welcome to my terminal portfolio. (Version {version})</Text>
+        <Text>Welcome to my terminal portfolio. (v{version})</Text>
         <br />
-        For a list of available commands, type{" `"}
-        <span className="text-blue-400">help</span>`
+        <span className="text-sm md:text-base">
+          For a list of available commands, type{" `"}
+          <span className="text-blue-400">help</span>`
+        </span>
       </div>
       <br />
     </>

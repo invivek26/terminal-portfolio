@@ -6,7 +6,7 @@ interface TextProps {
 
 function Text({ children, className, hoverEffect }: TextProps) {
   const classes = [
-    "w-fit",
+    "w-fit text-sm md:text-base",
     className ?? "text-green-400",
     hoverEffect ? "hover:text-blue-400" : "",
   ];

@@ -19,12 +19,24 @@ function Education({ args }: { args: string[] }) {
         <tbody>
           {education.map((edu) => (
             <tr key={edu.key}>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.key}.</td>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.institution}</td>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.degree}</td>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.period}</td>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.grade}</td>
-              <td className="whitespace-nowrap py-1 pr-2">{edu.keyPoints}</td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.key}.
+              </td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.institution}
+              </td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.degree}
+              </td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.period}
+              </td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.grade}
+              </td>
+              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
+                {edu.keyPoints}
+              </td>
             </tr>
           ))}
         </tbody>

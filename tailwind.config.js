@@ -11,6 +11,9 @@ export default {
           100: "#ffff",
         },
       },
+      transitionProperty: {
+        'height': 'height'
+      }
     },
   },
   plugins: [require("tailwind-scrollbar")],

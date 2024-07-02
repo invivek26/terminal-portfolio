@@ -59,7 +59,7 @@ function Base64({ args }: { args: string[] }) {
 
   return (
     <>
-      <Text>{result}</Text>
+      <Text className="w-full break-words">{result}</Text>
       <br />
     </>
   );

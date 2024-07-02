@@ -14,11 +14,9 @@ function TerminalOutput({ type, text, index }: TerminalOutputProps) {
       {type === "command" ? (
         <CommandHandler command={text} index={index} />
       ) : type === "input" ? (
-        <div className="flex items-center">
+        <div className="flex flex-row items-center">
           <TerminalHeader />
-          <span className="ml-2">
-            <Text>{text}</Text>
-          </span>
+          <Text className="ml-2 overflow-scroll whitespace-nowrap">{text}</Text>
         </div>
       ) : null}
     </div>
