@@ -32,7 +32,7 @@ function TerminalInput({
     <form onSubmit={handleSubmit} className="flex items-center py-0.5 pl-2">
       <TerminalHeader />
       <input
-        className="ml-2 flex-1 overflow-hidden bg-primary-100 text-sm text-green-400 focus:outline-none md:text-base"
+        className="ml-2 flex-1 appearance-none overflow-hidden bg-primary-100 text-sm text-green-400 focus:outline-none md:text-base"
         type="text"
         value={inputCommand}
         onChange={(e) => setInputCommand(e.target.value)}

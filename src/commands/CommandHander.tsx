@@ -50,7 +50,7 @@ function CommandHandler({
     case "pwd":
       return <PWD args={args} />;
     case "sudo":
-      return null;
+      return <CommandNotFound command={cmd} />;
     case "exit":
       return <Exit />;
     default:

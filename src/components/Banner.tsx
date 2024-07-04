@@ -117,8 +117,8 @@ export function Banner() {
     <>
       <div className="pl-2">
         <div className="flex animate-pulse items-center">
-          <pre className="text-[8px] md:text-base">{asciiText}</pre>
-          <pre className="ml-5 text-[1px] md:text-[1.5px]">{tuxAscii}</pre>
+          <pre className="text-[5px] md:text-base">{asciiText}</pre>
+          <pre className="ml-5 text-[0.8px] md:text-[1.5px]">{tuxAscii}</pre>
         </div>
         <br />
         <Text>Welcome to my terminal portfolio. (v{version})</Text>

@@ -53,7 +53,16 @@ function Terminal() {
 
   // Scroll to the end of the terminal when new output is added
   useEffect(() => {
-    if (endOfTerminal.current) {
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        if (endOfTerminal.current) {
+          endOfTerminal.current.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+          });
+        }
+      }, 300);
+    } else if (endOfTerminal.current) {
       endOfTerminal.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [history]);
@@ -140,7 +149,7 @@ function Terminal() {
   return (
     <HistoryContext.Provider value={historyContext}>
       <div
-        className="h-screen overflow-auto bg-primary-100 p-2 font-mono text-green-400"
+        className="min-h-screen appearance-none overflow-auto bg-primary-100 p-2 font-mono text-green-400"
         ref={terminalContainerRef}
       >
         {history[0]?.type === "banner" && <Banner />}

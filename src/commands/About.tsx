@@ -14,7 +14,7 @@ function About({ args }: { args: string[] }) {
   const { about } = config;
 
   return (
-    <div className="w-[90%] md:w-1/2">
+    <div className="w-full md:w-1/2">
       {about.map((line) => (
         <Text key={line} className="mb-2">
           {line}
