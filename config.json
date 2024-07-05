@@ -38,5 +38,22 @@
     "easterEgg": {
         "message": "Oh no you have found this message. Do not tell Vivek!!!"
     },
-    "version": "1.0.1"
+    "projects": [
+        {
+            "name": "Terminal Portfolio",
+            "link": "https://github.com/invivek26/terminal-portfolio",
+            "description": "A terminal based portfolio website written in ReactJS, TypeScript, and TailwindCSS."
+        },
+        {
+            "name": "Gmail Unsubscribe links",
+            "link": "https://github.com/invivek26/gmail-unsubscribe",
+            "description": "A Python script to extract all the unsubscribe links from Gmail."
+        },
+        {
+            "name": "ASU Class Notifier",
+            "link": "https://github.com/invivek26/asu-class-notifier",
+            "description": "A Python script to notify when a class is available at Arizona State University."
+        }
+    ],
+    "version": "1.0.2"
 }

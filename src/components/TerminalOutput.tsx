@@ -16,7 +16,9 @@ function TerminalOutput({ type, text, index }: TerminalOutputProps) {
       ) : type === "input" ? (
         <div className="flex flex-row items-center">
           <TerminalHeader />
-          <Text className="ml-2 overflow-scroll whitespace-nowrap">{text}</Text>
+          <Text className="ml-2 overflow-scroll whitespace-nowrap md:overflow-auto md:whitespace-normal">
+            {text}
+          </Text>
         </div>
       ) : null}
     </div>

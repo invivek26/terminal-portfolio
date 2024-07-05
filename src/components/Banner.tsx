@@ -121,7 +121,9 @@ export function Banner() {
           <pre className="ml-5 text-[0.8px] md:text-[1.5px]">{tuxAscii}</pre>
         </div>
         <br />
-        <Text>Welcome to my terminal portfolio. (v{version})</Text>
+        <Text className="text-base">
+          Welcome to my terminal portfolio. (v{version})
+        </Text>
         <br />
         <span className="text-sm md:text-base">
           For a list of available commands, type{" `"}

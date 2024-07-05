@@ -149,7 +149,7 @@ function Terminal() {
   return (
     <HistoryContext.Provider value={historyContext}>
       <div
-        className="min-h-screen appearance-none overflow-auto bg-primary-100 p-2 font-mono text-green-400"
+        className="h-screen appearance-none overflow-auto bg-primary-100 p-2 font-mono text-green-400"
         ref={terminalContainerRef}
       >
         {history[0]?.type === "banner" && <Banner />}

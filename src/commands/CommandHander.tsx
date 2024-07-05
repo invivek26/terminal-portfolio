@@ -9,6 +9,7 @@ import Exit from "./Exit";
 import Help from "./Help";
 import History from "./History";
 import Ls from "./Ls";
+import Projects from "./Projects";
 import PWD from "./PWD";
 import Socials from "./Socials";
 import Whoami from "./Whoami";
@@ -32,7 +33,7 @@ function CommandHandler({
     case "about":
       return <About args={args} />;
     case "projects":
-      return null;
+      return <Projects args={args} />;
     case "education":
       return <Education args={args} />;
     case "base64":
