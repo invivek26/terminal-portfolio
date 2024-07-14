@@ -27,7 +27,7 @@ function Terminal() {
 
   const commandHistory = useMemo(() => {
     const commandHist = [];
-    for (let i = 0; i < history.length; i += 2) {
+    for (let i = 0; i < history.length; i += 1) {
       if (history[i].type === "input") {
         commandHist.push(history[i].text);
       }
