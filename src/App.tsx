@@ -1,4 +1,3 @@
-// src/App.js
 import Terminal from "./components/Terminal";
 
 function App() {
