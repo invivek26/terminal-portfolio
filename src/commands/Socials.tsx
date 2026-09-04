@@ -1,5 +1,5 @@
-import Text from "../components/Text";
 import config from "../../config.json";
+import Text from "../components/Text";
 
 interface EchoProps {
   args: string[];

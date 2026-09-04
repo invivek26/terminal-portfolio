@@ -1,5 +1,5 @@
-import Text from "../components/Text";
 import config from "../../config.json";
+import Text from "../components/Text";
 
 function About({ args }: { args: string[] }) {
   if (args.length !== 0) {

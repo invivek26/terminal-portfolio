@@ -1,14 +1,15 @@
-# Terminal Portfolio README
+# Terminal Portfolio
 
 ## Overview
 
-Welcome to my Terminal Portfolio! This project is a unique and interactive way to showcase my skills, projects, and experience through a terminal-based interface. Users can navigate through various sections of my portfolio using simple commands, making it a fun and engaging experience.
+An interactive terminal portfolio built with React 19, TanStack Start, TanStack Router, Rsbuild, and Tailwind CSS 4.
 
 ## Features
 
 - **Interactive Command-Line Interface**: Navigate through different sections using terminal commands.
 - **Projects Showcase**: View details of my projects, including descriptions, technologies used, and links to repositories.
 - **Education**: View my educational background and qualifications.
+- **Experience**: View my professional roles and selected impact.
 - **Social Links**: Access my social media profiles.
 
 ## Installation
@@ -25,17 +26,24 @@ To run the Terminal Portfolio locally, follow these steps:
 2. **Install Dependencies**:
 
    ```bash
-   yarn
+   bun install
    ```
 
 3. **Run the Application**:
 
    ```bash
-   yarn dev
+   bun run dev
    ```
 
 4. **Access the Portfolio**:
-   Open your brower and access the portfolio at `http://localhost:5174` or the URL displayed in the terminal.
+   Open `http://localhost:3000`.
+
+## Checks
+
+```bash
+bun run check
+bun run build
+```
 
 ## Usage
 
@@ -91,6 +99,14 @@ Once you have the portfolio running, you can use the following commands to navig
   ```
 
   Shows details of my educational background.
+
+- **Experience**:
+
+  ```bash
+  experience
+  ```
+
+  Shows my professional experience.
 
 - **Exit**:
 

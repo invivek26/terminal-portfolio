@@ -6,6 +6,7 @@ import CommandNotFound from "./CommandNotFound";
 import Echo from "./Echo";
 import Education from "./Education";
 import Exit from "./Exit";
+import Experience from "./Experience";
 import Help from "./Help";
 import History from "./History";
 import Ls from "./Ls";
@@ -36,6 +37,8 @@ function CommandHandler({
       return <Projects args={args} />;
     case "education":
       return <Education args={args} />;
+    case "experience":
+      return <Experience args={args} />;
     case "base64":
       return <Base64 args={args} />;
     case "ls":

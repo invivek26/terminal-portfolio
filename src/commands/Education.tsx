@@ -1,5 +1,5 @@
-import Text from "../components/Text";
 import config from "../../config.json";
+import Text from "../components/Text";
 
 function Education({ args }: { args: string[] }) {
   if (args.length !== 0) {
@@ -11,39 +11,22 @@ function Education({ args }: { args: string[] }) {
     );
   }
 
-  const { education } = config;
-
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full">
-        <tbody>
-          {education.map((edu) => (
-            <tr key={edu.key}>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.key}.
-              </td>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.institution}
-              </td>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.degree}
-              </td>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.period}
-              </td>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.grade}
-              </td>
-              <td className="whitespace-nowrap py-1 pr-2 text-sm md:text-base">
-                {edu.keyPoints}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
+    <div className="space-y-4">
+      {config.education.map((education) => (
+        <section key={education.degree}>
+          <Text className="font-semibold text-blue-400">
+            {education.degree}
+          </Text>
+          <Text>{education.institution}</Text>
+          <Text className="text-zinc-400">
+            {education.period} · GPA: {education.grade}
+          </Text>
+        </section>
+      ))}
       <br />
     </div>
   );
 }
+
 export default Education;

@@ -1,5 +1,5 @@
 import Text from "../components/Text";
-import descriptions from "./data";
+import descriptions from "./commands";
 
 function Help({ args }: { args: string[] }) {
   if (args.length !== 0) {

@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 interface TextProps {
-  children: string | string[] | JSX.Element | JSX.Element[];
+  children: ReactNode;
   className?: string;
   hoverEffect?: boolean;
 }

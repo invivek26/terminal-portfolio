@@ -1,19 +1,21 @@
-import { useEffect, useMemo, useRef, useState } from "react";
 import autoAnimate from "@formkit/auto-animate";
+import type { KeyboardEvent } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import descriptions from "../commands/commands";
+import { Banner } from "./Banner";
+import { HistoryContext } from "./Context";
 import TerminalInput from "./TerminalInput";
 import TerminalOutput from "./TerminalOutput";
-import { HistoryContext } from "./Context";
-import descriptions from "../commands/data";
-import { Banner } from "./Banner";
 
 interface Command {
-  type: string;
+  id: number;
+  type: "banner" | "command" | "input";
   text: string;
 }
 
 function Terminal() {
   const [history, setHistory] = useState<Command[]>([
-    { type: "banner", text: "banner" },
+    { id: 0, type: "banner", text: "banner" },
   ]);
   const endOfTerminal = useRef<HTMLDivElement>(null);
 
@@ -22,8 +24,6 @@ function Terminal() {
   const [inputCommand, setInputCommand] = useState<string>("");
 
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const terminalContainerRef = useRef<HTMLDivElement>(null);
 
   const commandHistory = useMemo(() => {
     const commandHist = [];
@@ -37,22 +37,24 @@ function Terminal() {
 
   // Add a new command to the terminal history
   const handleCommand = (command: string) => {
-    setHistory([
-      ...history,
-      { type: "input", text: command },
-      { type: "command", text: command },
+    setHistory((currentHistory) => [
+      ...currentHistory,
+      { id: currentHistory.length, type: "input", text: command },
+      { id: currentHistory.length + 1, type: "command", text: command },
     ]);
     setHistoryMarker(-1);
     setInputCommand("");
   };
 
   // Clear the terminal history
-  const clearHistory = () => {
+  const clearHistory = useCallback(() => {
     setHistory([]);
-  };
+  }, []);
 
   // Scroll to the end of the terminal when new output is added
   useEffect(() => {
+    if (history.length === 0) return;
+
     if (window.innerWidth < 768) {
       setTimeout(() => {
         if (endOfTerminal.current) {
@@ -68,18 +70,20 @@ function Terminal() {
   }, [history]);
 
   const moveCursorToEnd = () => {
-    if (inputRef.current) {
-      inputRef.current.blur();
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 5);
-    }
+    requestAnimationFrame(() => {
+      const input = inputRef.current;
+      input?.focus();
+      input?.setSelectionRange(input.value.length, input.value.length);
+    });
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     const clearScreen = e.ctrlKey && e.key.toLowerCase() === "l";
 
-    if (e.key === "ArrowUp") {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (inputCommand) handleCommand(inputCommand);
+    } else if (e.key === "ArrowUp") {
       e.preventDefault();
       if (historyMarker < commandHistory.length - 1) {
         const newMarker = historyMarker + 1;
@@ -119,27 +123,13 @@ function Terminal() {
     }
   };
 
-  useEffect(() => {
-    if (terminalContainerRef.current) {
-      terminalContainerRef.current.addEventListener("click", moveCursorToEnd);
-    }
-    return () => {
-      if (terminalContainerRef.current) {
-        terminalContainerRef.current.removeEventListener(
-          "click",
-          moveCursorToEnd,
-        );
-      }
-    };
-  }, [terminalContainerRef]);
-
   const ioAnimationRef = useRef(null);
 
   useEffect(() => {
     if (ioAnimationRef.current) {
       autoAnimate(ioAnimationRef.current);
     }
-  }, [ioAnimationRef]);
+  }, []);
 
   const historyContext = useMemo(
     () => ({ commandHistory, clearHistory }),
@@ -148,16 +138,12 @@ function Terminal() {
 
   return (
     <HistoryContext.Provider value={historyContext}>
-      <div
-        className="h-screen appearance-none overflow-auto bg-primary-100 p-2 font-mono text-green-400"
-        ref={terminalContainerRef}
-      >
+      <div className="h-svh appearance-none overflow-auto bg-black p-2 font-mono text-green-400">
         {history[0]?.type === "banner" && <Banner />}
         <div ref={ioAnimationRef}>
           {history.map((command, index) => (
             <TerminalOutput
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
+              key={command.id}
               text={command.text}
               type={command.type}
               index={index}

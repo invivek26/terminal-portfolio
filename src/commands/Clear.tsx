@@ -1,9 +1,13 @@
 import { useContext, useEffect } from "react";
-import Text from "../components/Text";
 import { HistoryContext } from "../components/Context";
+import Text from "../components/Text";
 
 function Clear({ args }: { args: string[] }) {
   const { clearHistory } = useContext(HistoryContext);
+
+  useEffect(() => {
+    if (args.length === 0) clearHistory();
+  }, [args.length, clearHistory]);
 
   if (args.length !== 0) {
     return (
@@ -13,10 +17,6 @@ function Clear({ args }: { args: string[] }) {
       </>
     );
   }
-
-  useEffect(() => {
-    clearHistory();
-  }, [clearHistory]);
 
   return null;
 }

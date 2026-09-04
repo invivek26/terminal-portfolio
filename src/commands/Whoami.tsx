@@ -12,7 +12,7 @@ function Whoami({ args }: { args: string[] }) {
 
   return (
     <>
-      <Text>user</Text>
+      <Text>vivek</Text>
       <br />
     </>
   );

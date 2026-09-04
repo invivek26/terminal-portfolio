@@ -16,7 +16,7 @@ function History({ index }: { index: number }) {
       <table>
         <tbody>
           {currentHistory.map((command, i) => (
-            // eslint-disable-next-line react/no-array-index-key
+            // biome-ignore lint/suspicious/noArrayIndexKey: history entries never reorder
             <tr key={i}>
               <td className="pl-2 text-right">
                 <Text>{(i + 1).toString()}</Text>

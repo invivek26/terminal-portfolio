@@ -1,5 +1,5 @@
-import Text from "../components/Text";
 import config from "../../config.json";
+import Text from "../components/Text";
 
 const files = ["secret.txt"];
 
@@ -22,7 +22,7 @@ function Base64({ args }: { args: string[] }) {
   const decodeFromBase64 = (encoded: string) => {
     try {
       return atob(encoded);
-    } catch (error) {
+    } catch {
       return "base64: error: invalid input";
     }
   };

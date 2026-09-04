@@ -1,5 +1,5 @@
+import config from "../../config.json";
 import Text from "./Text";
-import { version } from "../../config.json";
 
 const asciiText = `
 ██╗░░░██╗██╗██╗░░░██╗███████╗██╗░░██╗
@@ -113,6 +113,8 @@ const tuxAscii = `
 `;
 
 export function Banner() {
+  const { version } = config;
+
   return (
     <>
       <div className="pl-2">

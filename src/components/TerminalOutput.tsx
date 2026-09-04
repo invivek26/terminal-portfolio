@@ -1,4 +1,4 @@
-import CommandHandler from "../commands/CommandHander";
+import CommandHandler from "../commands/CommandHandler";
 import TerminalHeader from "./TerminalHeader";
 import Text from "./Text";
 

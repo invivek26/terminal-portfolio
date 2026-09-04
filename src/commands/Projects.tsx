@@ -1,21 +1,23 @@
+import config from "../../config.json";
 import Text from "../components/Text";
-import { projects } from "../../config.json";
 
 function Projects({ args }: { args: string[] }) {
   if (args.length !== 0) {
     return (
       <>
-        <Text>help: error: too many arguments</Text>
+        <Text>projects: error: too many arguments</Text>
         <br />
       </>
     );
   }
 
+  const { projects } = config;
+
   return (
     <div>
       {projects.map((project, index) => (
-        <>
-          <div key={project.name}>
+        <div key={project.name}>
+          <div>
             <Text>{(index + 1).toString()}. </Text>
             <Text className="underline decoration-wavy" hoverEffect>
               <a href={project.link} target="_blank" rel="noreferrer">
@@ -25,7 +27,7 @@ function Projects({ args }: { args: string[] }) {
             <Text>{project.description}</Text>
           </div>
           <br />
-        </>
+        </div>
       ))}
 
       <Text>etc...</Text>

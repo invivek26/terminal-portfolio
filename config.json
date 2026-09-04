@@ -1,59 +1,82 @@
 {
-    "about": [
-        "Hi, I'm Vivek.",
-        "I am student at Arizona State University pursuing Bachelor of Science in Computer Science.",
-        "I am an Innovative Full Stack designer and developer specializing in React Native, React, NodeJS, and Firebase.",
-        "I am passionate about building scalable and efficient web applications and mobile applications."
-    ],
-    "socials": {
-        "github": "https://github.com/invivek26",
-        "linkedin": "https://www.linkedin.com/in/vivek-i-n/"
+  "about": [
+    "Hi, I'm Vivek.",
+    "I am the Founder & CTO of GameStock.",
+    "I build mobile and full-stack products with React Native, TypeScript, Node.js, and cloud infrastructure.",
+    "I hold bachelor's and master's degrees in Computer Science from Arizona State University, both with a 4.0 GPA."
+  ],
+  "socials": {
+    "github": "https://github.com/invivek26",
+    "linkedin": "https://www.linkedin.com/in/vivek-i-n/"
+  },
+  "education": [
+    {
+      "institution": "Arizona State University",
+      "degree": "Master of Science, Computer Science",
+      "period": "Jan 2025 – Dec 2025",
+      "grade": "4.0"
     },
-    "education": [
-        {
-            "institution": "Arizona State University",
-            "degree": "Bachelor of Science in Computer Science",
-            "period": "2021 - 2024",
-            "grade": "4.0 GPA",
-            "keyPoints": "Various programming languages and technologies",
-            "key": 1
-        },
-        {
-            "institution": "RV PU College",
-            "degree": "High School Diploma (Computer Science, Mathematics, Science)",
-            "period": "2019 - 2021",
-            "grade": "99.83%",
-            "keyPoints": "Focus on Computer Science, Mathematics, and Science",
-            "key": 2
-        },
-        {
-            "institution": "Deccan International School",
-            "degree": "High School Diploma (Computer Science, Mathematics, Science)",
-            "period": "2017 - 2019",
-            "grade": "96.33%",
-            "keyPoints": "Studies in Computer Science, Mathematics, and Science",
-            "key": 3
-        }
-    ],
-    "easterEgg": {
-        "message": "Oh no you have found this message. Do not tell Vivek!!!"
+    {
+      "institution": "Arizona State University",
+      "degree": "Bachelor of Science, Computer Science",
+      "period": "2021 – Dec 2024",
+      "grade": "4.0"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Founder & CTO",
+      "company": "GameStock",
+      "employment": "Full-time",
+      "period": "Aug 2025 – Present",
+      "location": "",
+      "summary": "Co-founded GameStock, a fantasy trading platform for stock and crypto tournaments. The company raised $2M in pre-seed funding led by Peak XV Partners; I lead product, engineering, and technical strategy.",
+      "highlights": [
+        "Scaled the platform past 20,000 accounts with 10,600+ monthly active users, earning a 4.8 rating across 440+ Google Play reviews.",
+        "Built the tournament and live-trading platform behind 150,000+ tracked tournament joins; reduced transaction-broadcast p50 from 2.95 seconds to about 0.9 seconds.",
+        "Designed the financial infrastructure behind paid competitions, supporting 2,000+ transacting users and 16,000+ completed payment events across wallets, funding, escrow, reconciliation, refunds, and payouts.",
+        "Built the analytics and release foundation across AppsFlyer, PostHog, Sentry, parallel CI, automated native and Convex deployments, and 18 critical E2E flows; recent CI averaged 2.5 minutes at 95%+ success across 1,000+ monthly runs."
+      ]
     },
-    "projects": [
-        {
-            "name": "Terminal Portfolio",
-            "link": "https://github.com/invivek26/terminal-portfolio",
-            "description": "A terminal based portfolio website written in ReactJS, TypeScript, and TailwindCSS."
-        },
-        {
-            "name": "Gmail Unsubscribe links",
-            "link": "https://github.com/invivek26/gmail-unsubscribe",
-            "description": "A Python script to extract all the unsubscribe links from Gmail."
-        },
-        {
-            "name": "ASU Class Notifier",
-            "link": "https://github.com/invivek26/asu-class-notifier",
-            "description": "A Python script to notify when a class is available at Arizona State University."
-        }
-    ],
-    "version": "1.0.2"
+    {
+      "role": "Founder & CTO",
+      "company": "Zen Shuttles",
+      "employment": "",
+      "period": "May 2022 – Dec 2023",
+      "location": "Remote",
+      "summary": "Co-founded Zen Shuttles, a last-mile mobility service for ASU students, and owned product and engineering from launch to break-even within 15 months. Won first place at ASU's Pitch Showcase.",
+      "highlights": [
+        "Built and launched the rider and driver mobile apps plus the internal operations dashboard with React Native, React, Firebase, Stripe, and Google Cloud.",
+        "Designed the dispatch and ride-scheduling engine that grouped nearby demand, tracked vehicle capacity, and surfaced routes and ETAs to drivers in real time.",
+        "Reduced Google Maps and Places API usage through autocomplete caching, session tokens, and removal of redundant route renders and requests.",
+        "Built memberships, payments, referral and promotion systems, push messaging, and real-time ride, driver, customer, and revenue analytics."
+      ]
+    }
+  ],
+  "easterEgg": {
+    "message": "Oh no you have found this message. Do not tell Vivek!!!"
+  },
+  "projects": [
+    {
+      "name": "GameStock",
+      "link": "https://gamestock.com",
+      "description": "A fantasy trading platform where players compete in stock and crypto tournaments for real prizes."
+    },
+    {
+      "name": "Expo OneSignal Live Activities",
+      "link": "https://www.npmjs.com/package/expo-onesignal-live-activities",
+      "description": "An Expo config plugin that automates complete OneSignal Live Activity setup, with 10,000+ npm downloads."
+    },
+    {
+      "name": "React Native Number Animation",
+      "link": "https://www.npmjs.com/package/react-native-number-animation",
+      "description": "High-performance native rolling-number animations for React Native Fabric, with 3,000+ npm downloads."
+    },
+    {
+      "name": "React Native Marquee Animation",
+      "link": "https://www.npmjs.com/package/react-native-marquee-animation",
+      "description": "A production-grade native marquee for React Native Fabric, with 2,800+ npm downloads."
+    }
+  ],
+  "version": "2.0.0"
 }
