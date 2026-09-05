@@ -17,25 +17,19 @@ function Socials({ args }: EchoProps) {
 
   return (
     <>
-      <Text hoverEffect={true}>
-        <a
-          href={config.socials.github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </Text>
-
-      <Text hoverEffect={true}>
-        <a
-          href={config.socials.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </Text>
+      {Object.entries(config.socials).map(([label, href]) => (
+        <Text hoverEffect key={label}>
+          <a
+            href={href}
+            target={href.startsWith("mailto:") ? undefined : "_blank"}
+            rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+          >
+            {label === "npm"
+              ? "npm"
+              : label.charAt(0).toUpperCase() + label.slice(1)}
+          </a>
+        </Text>
+      ))}
 
       <br />
     </>
