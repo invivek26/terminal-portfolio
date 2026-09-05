@@ -1,13 +1,18 @@
 {
   "about": [
-    "Hi, I'm Vivek.",
-    "I am the Founder & CTO of GameStock.",
-    "I build mobile and full-stack products with React Native, TypeScript, Node.js, and cloud infrastructure.",
+    "Hi, I'm Vivek Indlebele Narasimha Prasad.",
+    "I am a founder, CTO, and product engineer behind GameStock and Zen Shuttles.",
+    "I turn ambitious ideas into products people can use—from the first prototype through payments, analytics, releases, and scale.",
+    "I also maintain React Native and Expo packages with 16K+ cumulative npm downloads.",
     "I hold bachelor's and master's degrees in Computer Science from Arizona State University, both with a 4.0 GPA."
   ],
   "socials": {
+    "portfolio": "https://viveks.app",
     "github": "https://github.com/invivek26",
-    "linkedin": "https://www.linkedin.com/in/vivek-i-n/"
+    "npm": "https://www.npmjs.com/~invicky26",
+    "linkedin": "https://www.linkedin.com/in/vivek-i-n/",
+    "email": "mailto:vivek@gamestock.app",
+    "calendly": "https://calendly.com/vivek-gamestock"
   },
   "education": [
     {
@@ -32,7 +37,7 @@
       "location": "",
       "summary": "Co-founded GameStock, a fantasy trading platform for stock and crypto tournaments. The company raised $2M in pre-seed funding led by Peak XV Partners; I lead product, engineering, and technical strategy.",
       "highlights": [
-        "Scaled the platform past 20,000 accounts with 10,600+ monthly active users, earning a 4.8 rating across 440+ Google Play reviews.",
+        "Scaled the platform past 20,000 users with 10,600+ monthly active users, earning a 4.8 rating across 440+ Google Play reviews.",
         "Built the tournament and live-trading platform behind 150,000+ tracked tournament joins; reduced transaction-broadcast p50 from 2.95 seconds to about 0.9 seconds.",
         "Designed the financial infrastructure behind paid competitions, supporting 2,000+ transacting users and 16,000+ completed payment events across wallets, funding, escrow, reconciliation, refunds, and payouts.",
         "Built the analytics and release foundation across AppsFlyer, PostHog, Sentry, parallel CI, automated native and Convex deployments, and 18 critical E2E flows; recent CI averaged 2.5 minutes at 95%+ success across 1,000+ monthly runs."
@@ -43,7 +48,7 @@
       "company": "Zen Shuttles",
       "employment": "",
       "period": "May 2022 – Dec 2023",
-      "location": "Remote",
+      "location": "Tempe, AZ",
       "summary": "Co-founded Zen Shuttles, a last-mile mobility service for ASU students, and owned product and engineering from launch to break-even within 15 months. Secured $31K across four ASU venture awards and won first place at ASU's Pitch Showcase.",
       "highlights": [
         "Built and launched the rider and driver mobile apps plus the internal operations dashboard with React Native, React, Firebase, Stripe, and Google Cloud.",
